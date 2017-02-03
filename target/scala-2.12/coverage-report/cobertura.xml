@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
+<coverage 
+line-rate="1.00" lines-valid="14" lines-covered="14" branches-valid="2" branches-covered="2" branch-rate="1.00" complexity="0" version="1.0" timestamp="1486117960366">
+    <sources>
+        <source>--source</source>
+        <source>/home/shubham/Downloads/assignment-5-ramandeep-shivangi/src/main/scala-2.12</source>
+        <source>/home/shubham/Downloads/assignment-5-ramandeep-shivangi/src/main/scala</source>
+        <source>/home/shubham/Downloads/assignment-5-ramandeep-shivangi/src/main/java</source>
+    </sources>
+    <packages>
+        <package name="&lt;empty&gt;" line-rate="1.00" branch-rate="1.00" complexity="0">
+            <classes>
+                <class name="FileOperations" filename="FileOperations.scala" line-rate="1.00" branch-rate="1.00" complexity="0">
+                    <methods>
+                        <method 
+                        name="&lt;empty&gt;/FileOperations/getFiles" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="21" hits="1" branch="false"/>
+                                <line number="25" hits="1" branch="false"/>
+                                <line number="17" hits="1" branch="false"/>
+                                <line number="21" hits="1" branch="false"/>
+                                <line number="28" hits="1" branch="false"/>
+                                <line number="19" hits="1" branch="false"/>
+                                <line number="29" hits="1" branch="false"/>
+                                <line number="21" hits="1" branch="false"/>
+                                <line number="15" hits="1" branch="false"/>
+                                <line number="17" hits="1" branch="false"/>
+                                <line number="22" hits="1" branch="false"/>
+                                <line number="17" hits="1" branch="false"/>
+                                <line number="29" hits="1" branch="false"/>
+                                <line number="21" hits="1" branch="false"/>
+                            </lines>
+</method>
+                    </methods>
+                    <lines>
+                        <line number="21" hits="1" branch="false"/>
+                        <line number="25" hits="1" branch="false"/>
+                        <line number="17" hits="1" branch="false"/>
+                        <line number="21" hits="1" branch="false"/>
+                        <line number="28" hits="1" branch="false"/>
+                        <line number="19" hits="1" branch="false"/>
+                        <line number="29" hits="1" branch="false"/>
+                        <line number="21" hits="1" branch="false"/>
+                        <line number="15" hits="1" branch="false"/>
+                        <line number="17" hits="1" branch="false"/>
+                        <line number="22" hits="1" branch="false"/>
+                        <line number="17" hits="1" branch="false"/>
+                        <line number="29" hits="1" branch="false"/>
+                        <line number="21" hits="1" branch="false"/>
+                    </lines>
+                </class>
+            </classes>
+        </package>
+    </packages>
+</coverage>

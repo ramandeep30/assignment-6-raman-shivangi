@@ -1,0 +1,61 @@
+<scoverage 
+statement-count="14" statements-invoked="14" statement-rate="100.00" branch-rate="100.00" version="1.0" timestamp="1486117960392">
+    <packages>
+        <package name="&lt;empty&gt;" statement-count="14" statements-invoked="14" statement-rate="100.00">
+            <classes>
+                <class 
+                name="FileOperations" filename="FileOperations.scala" statement-count="14" statements-invoked="14" statement-rate="100.00" branch-rate="100.00">
+                    <methods>
+                        <method 
+                        name="&lt;empty&gt;/FileOperations/getFiles" statement-count="14" statements-invoked="14" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="FileOperations" class-type="Class" full-class-name="FileOperations" source="/home/shubham/Downloads/assignment-5-ramandeep-shivangi/src/main/scala/FileOperations.scala" method="getFiles" start="525" end="573" line="21" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="FileOperations" class-type="Class" full-class-name="FileOperations" source="/home/shubham/Downloads/assignment-5-ramandeep-shivangi/src/main/scala/FileOperations.scala" method="getFiles" start="683" end="691" line="25" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="FileOperations" class-type="Class" full-class-name="FileOperations" source="/home/shubham/Downloads/assignment-5-ramandeep-shivangi/src/main/scala/FileOperations.scala" method="getFiles" start="393" end="414" line="17" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="FileOperations" class-type="Class" full-class-name="FileOperations" source="/home/shubham/Downloads/assignment-5-ramandeep-shivangi/src/main/scala/FileOperations.scala" method="getFiles" start="525" end="544" line="21" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="FileOperations" class-type="Class" full-class-name="FileOperations" source="/home/shubham/Downloads/assignment-5-ramandeep-shivangi/src/main/scala/FileOperations.scala" method="getFiles" start="710" end="753" line="28" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="FileOperations" class-type="Class" full-class-name="FileOperations" source="/home/shubham/Downloads/assignment-5-ramandeep-shivangi/src/main/scala/FileOperations.scala" method="getFiles" start="454" end="501" line="19" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="FileOperations" class-type="Class" full-class-name="FileOperations" source="/home/shubham/Downloads/assignment-5-ramandeep-shivangi/src/main/scala/FileOperations.scala" method="getFiles" start="725" end="747" line="29" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="FileOperations" class-type="Class" full-class-name="FileOperations" source="/home/shubham/Downloads/assignment-5-ramandeep-shivangi/src/main/scala/FileOperations.scala" method="getFiles" start="525" end="566" line="21" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="FileOperations" class-type="Class" full-class-name="FileOperations" source="/home/shubham/Downloads/assignment-5-ramandeep-shivangi/src/main/scala/FileOperations.scala" method="getFiles" start="345" end="359" line="15" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="FileOperations" class-type="Class" full-class-name="FileOperations" source="/home/shubham/Downloads/assignment-5-ramandeep-shivangi/src/main/scala/FileOperations.scala" method="getFiles" start="416" end="661" line="17" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="FileOperations" class-type="Class" full-class-name="FileOperations" source="/home/shubham/Downloads/assignment-5-ramandeep-shivangi/src/main/scala/FileOperations.scala" method="getFiles" start="594" end="653" line="22" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="FileOperations" class-type="Class" full-class-name="FileOperations" source="/home/shubham/Downloads/assignment-5-ramandeep-shivangi/src/main/scala/FileOperations.scala" method="getFiles" start="371" end="414" line="17" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="FileOperations" class-type="Class" full-class-name="FileOperations" source="/home/shubham/Downloads/assignment-5-ramandeep-shivangi/src/main/scala/FileOperations.scala" method="getFiles" start="740" end="746" line="29" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="FileOperations" class-type="Class" full-class-name="FileOperations" source="/home/shubham/Downloads/assignment-5-ramandeep-shivangi/src/main/scala/FileOperations.scala" method="getFiles" start="552" end="565" line="21" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+            </classes>
+        </package>
+    </packages>
+</scoverage>

@@ -1,0 +1,377 @@
+<html>
+      <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title id="title">
+          FileOperations.scala.html
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/css/theme.default.min.css" type="text/css"/><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/js/jquery.tablesorter.min.js"></script><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" type="text/css"/><script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script><script type="text/javascript">
+        $(document).ready(function() {$(".tablesorter").tablesorter();});
+      </script>
+        <style>
+          table.codegrid { font-family: monospace; font-size: 12px; width: auto!important; }table.statementlist { width: auto!important; font-size: 13px; } table.codegrid td { padding: 0!important; border: 0!important } table td.linenumber { width: 40px!important; } 
+        </style>
+      </head>
+      <body style="font-family: monospace;">
+        <ul class="nav nav-tabs">
+          <li>
+            <a href="#codegrid" data-toggle="tab">Codegrid</a>
+          </li>
+          <li>
+            <a href="#statementlist" data-toggle="tab">Statement List</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="codegrid">
+            <pre style='font-size: 12pt; font-family: courier;'>1 <span style=''>import java.io.File
+</span>2 <span style=''>
+</span>3 <span style=''>import scala.concurrent.ExecutionContext.Implicits.global
+</span>4 <span style=''>import scala.concurrent.Future
+</span>5 <span style=''>
+</span>6 <span style=''>
+</span>7 <span style=''>/**
+</span>8 <span style=''>  * Created by Ramandeep and Shivangi on 2/3/17.
+</span>9 <span style=''>  */
+</span>10 <span style=''>
+</span>11 <span style=''>class FileOperations {
+</span>12 <span style=''>  def getListOfFiles(path: String): Future[List[File]] = {
+</span>13 <span style=''>
+</span>14 <span style=''>    def getFiles(path: String, fileList: List[File]): List[File] = {
+</span>15 <span style=''>      val directory = </span><span style='background: #AEF1AE'>new File(path)</span><span style=''>
+</span>16 <span style=''>
+</span>17 <span style=''>      if (</span><span style='background: #AEF1AE'>directory.exists() &amp;&amp; directory.isDirectory</span><span style=''>) </span><span style='background: #AEF1AE'>{
+</span>18 <span style=''></span><span style='background: #AEF1AE'>
+</span>19 <span style=''></span><span style='background: #AEF1AE'>        val listOfFiles = fileList ::: directory.listFiles.filter(_.isFile).toList
+</span>20 <span style=''></span><span style='background: #AEF1AE'>
+</span>21 <span style=''></span><span style='background: #AEF1AE'>        val dirList = directory.listFiles.filter(_.isDirectory).toList
+</span>22 <span style=''></span><span style='background: #AEF1AE'>        listOfFiles ::: dirList.flatMap(x =&gt; getFiles(x.getPath, List[File]()))
+</span>23 <span style=''></span><span style='background: #AEF1AE'>      }</span><span style=''>
+</span>24 <span style=''>      else {
+</span>25 <span style=''>        </span><span style='background: #AEF1AE'>fileList</span><span style=''>
+</span>26 <span style=''>      }
+</span>27 <span style=''>    }
+</span>28 <span style=''>    </span><span style='background: #AEF1AE'>Future {
+</span>29 <span style=''></span><span style='background: #AEF1AE'>      getFiles(path, List())
+</span>30 <span style=''></span><span style='background: #AEF1AE'>    }</span><span style=''>
+</span>31 <span style=''>  }
+</span>32 <span style=''>}
+</span></pre>
+          </div>
+          <div class="tab-pane" id="statementlist">
+            <table cellspacing="0" cellpadding="0" class="table statementlist">
+      <tr>
+        <th>Line</th>
+        <th>Stmt Id</th>
+        <th>Pos</th>
+        <th>Tree</th>
+        <th>Symbol</th>
+        <th>Code</th>
+      </tr><tr>
+        <td>
+          15
+        </td>
+        <td>
+          1
+        </td>
+        <td>
+          345
+          -
+          359
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.io.File.&lt;init&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          new java.io.File(path)
+        </td>
+      </tr><tr>
+        <td>
+          17
+        </td>
+        <td>
+          2
+        </td>
+        <td>
+          393
+          -
+          414
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.io.File.isDirectory
+        </td>
+        <td style="background: #AEF1AE">
+          directory.isDirectory()
+        </td>
+      </tr><tr>
+        <td>
+          17
+        </td>
+        <td>
+          10
+        </td>
+        <td>
+          416
+          -
+          661
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          {
+  val listOfFiles: List[java.io.File] = {
+    &lt;synthetic&gt; &lt;artifact&gt; val x$2: List[java.io.File] = fileList;
+    scala.Predef.refArrayOps[java.io.File](scala.Predef.refArrayOps[java.io.File](directory.listFiles()).filter(((x$1: java.io.File) =&gt; x$1.isFile()))).toList.:::[java.io.File](x$2)
+  };
+  val dirList: List[java.io.File] = scala.Predef.refArrayOps[java.io.File](scala.Predef.refArrayOps[java.io.File](directory.listFiles()).filter(((x$3: java.io.File) =&gt; x$3.isDirectory()))).toList;
+  {
+    &lt;synthetic&gt; &lt;artifact&gt; val x$4: List[java.io.File] = listOfFiles;
+    dirList.flatMap[java.io.File, List[java.io.File]](((x: java.io.File) =&gt; getFiles(x.getPath(), scala.collection.immutable.Nil)))(immutable.this.List.canBuildFrom[java.io.File]).:::[java.io.File](x$4)
+  }
+}
+        </td>
+      </tr><tr>
+        <td>
+          17
+        </td>
+        <td>
+          3
+        </td>
+        <td>
+          371
+          -
+          414
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Boolean.&amp;&amp;
+        </td>
+        <td style="background: #AEF1AE">
+          directory.exists().&amp;&amp;(directory.isDirectory())
+        </td>
+      </tr><tr>
+        <td>
+          19
+        </td>
+        <td>
+          4
+        </td>
+        <td>
+          454
+          -
+          501
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.immutable.List.:::
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.refArrayOps[java.io.File](scala.Predef.refArrayOps[java.io.File](directory.listFiles()).filter(((x$1: java.io.File) =&gt; x$1.isFile()))).toList.:::[java.io.File](x$2)
+        </td>
+      </tr><tr>
+        <td>
+          21
+        </td>
+        <td>
+          8
+        </td>
+        <td>
+          525
+          -
+          573
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.TraversableOnce.toList
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.refArrayOps[java.io.File](scala.Predef.refArrayOps[java.io.File](directory.listFiles()).filter(((x$3: java.io.File) =&gt; x$3.isDirectory()))).toList
+        </td>
+      </tr><tr>
+        <td>
+          21
+        </td>
+        <td>
+          5
+        </td>
+        <td>
+          525
+          -
+          544
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.io.File.listFiles
+        </td>
+        <td style="background: #AEF1AE">
+          directory.listFiles()
+        </td>
+      </tr><tr>
+        <td>
+          21
+        </td>
+        <td>
+          7
+        </td>
+        <td>
+          525
+          -
+          566
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.TraversableLike.filter
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.refArrayOps[java.io.File](directory.listFiles()).filter(((x$3: java.io.File) =&gt; x$3.isDirectory()))
+        </td>
+      </tr><tr>
+        <td>
+          21
+        </td>
+        <td>
+          6
+        </td>
+        <td>
+          552
+          -
+          565
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.io.File.isDirectory
+        </td>
+        <td style="background: #AEF1AE">
+          x$3.isDirectory()
+        </td>
+      </tr><tr>
+        <td>
+          22
+        </td>
+        <td>
+          9
+        </td>
+        <td>
+          594
+          -
+          653
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.immutable.List.:::
+        </td>
+        <td style="background: #AEF1AE">
+          dirList.flatMap[java.io.File, List[java.io.File]](((x: java.io.File) =&gt; getFiles(x.getPath(), scala.collection.immutable.Nil)))(immutable.this.List.canBuildFrom[java.io.File]).:::[java.io.File](x$4)
+        </td>
+      </tr><tr>
+        <td>
+          25
+        </td>
+        <td>
+          11
+        </td>
+        <td>
+          683
+          -
+          691
+        </td>
+        <td>
+          Ident
+        </td>
+        <td>
+          FileOperations.fileList
+        </td>
+        <td style="background: #AEF1AE">
+          fileList
+        </td>
+      </tr><tr>
+        <td>
+          28
+        </td>
+        <td>
+          14
+        </td>
+        <td>
+          710
+          -
+          753
+        </td>
+        <td>
+          ApplyToImplicitArgs
+        </td>
+        <td>
+          scala.concurrent.Future.apply
+        </td>
+        <td style="background: #AEF1AE">
+          scala.concurrent.Future.apply[List[java.io.File]](getFiles(path, scala.collection.immutable.Nil))(scala.concurrent.ExecutionContext.Implicits.global)
+        </td>
+      </tr><tr>
+        <td>
+          29
+        </td>
+        <td>
+          13
+        </td>
+        <td>
+          725
+          -
+          747
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          FileOperations.getFiles
+        </td>
+        <td style="background: #AEF1AE">
+          getFiles(path, scala.collection.immutable.Nil)
+        </td>
+      </tr><tr>
+        <td>
+          29
+        </td>
+        <td>
+          12
+        </td>
+        <td>
+          740
+          -
+          746
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.immutable.Nil
+        </td>
+        <td style="background: #AEF1AE">
+          scala.collection.immutable.Nil
+        </td>
+      </tr>
+    </table>
+          </div>
+        </div>
+      </body>
+    </html>
